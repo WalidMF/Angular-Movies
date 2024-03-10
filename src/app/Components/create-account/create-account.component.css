@@ -1,0 +1,140 @@
+.page-body{   
+    height: 100vh;
+    background-image: url("../../../assets/Images/main-background.jpg");
+    background-color: #222831;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-size: cover;
+
+}
+
+.regist-container-style{
+    width: 400px;
+    height: 560px;
+    background-color: #080808e7;
+    margin-left: calc(50% - 200px);
+    margin-top: 30px;
+    border: 1px solid #222831;
+    border-radius: 15px;
+    position:fixed;
+    
+}
+
+.regist-container-input-style{
+    display: inline;
+    float: left;
+    margin: 40px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+}
+
+.regist-head-style{
+    font-size: 28px;
+    text-align: center;
+    font-weight: bolder;
+    color: #EEEEEE;
+
+}
+
+.input-icon-style{
+    float: left;
+    width: 50px;
+    margin-top: 15px;
+    margin-left: 10px;
+    padding: 10px 0px;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    font-size: 24px;
+    color: #EEEEEE;
+    text-align:center;
+    background-color: #31363F;
+
+}
+
+.txt-style{
+    width: 230px;
+    height: 50px;
+    margin-top: 15px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border: 0px;
+    font-size: 14px;
+    padding:1px 8px;
+    background-color: #31363F;
+    color: #EEEEEE;
+}
+
+.txt-style:hover{
+    border: 0px;
+}
+
+.txt-style:valid{
+    border: 0px;
+}
+
+.but-style{
+    width: 295px;
+    height: 50px;
+    margin-left: 10px;
+    border-radius: 7px;
+    border: 0px;
+    font-size: 18px;
+    background-color: #346769;
+    color: white;
+}
+
+#loginbut{
+    text-align: center;
+    font-size: 14px;
+    color: #EEEEEE;
+
+}
+
+#loginbut>a{
+    font-weight: normal;
+    color: #76ABAE;
+    text-decoration: none;
+}
+
+#loginbut>a:hover{
+    color: #90d3d6;
+    text-decoration: underline;
+}
+
+.but-style:hover{
+    border: 1px solid rgb(0, 0, 0);
+    font-size: 18px;
+    padding-left:10px ;
+    background-color: #76ABAE;
+}
+
+#terms{
+    margin: 15px 0px 30px 10px;
+    width: 16px;
+    height: 16px;
+}
+
+#terms-txt{
+    font-size: 16px;
+    font-weight: normal;
+    color: #b8b8b8;
+}
+
+#terms-txt>a{
+    font-weight: normal;
+    color: #76ABAE;
+    text-decoration: none;
+}
+
+#terms-txt>a:hover{
+    color: #90d3d6;
+    text-decoration: underline;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
