@@ -1,9 +1,6 @@
 <div class="page-body">
-
     <div class="regist-container-style">
-
         <form action="#" method="POST" class="regist-container-input-style" autocomplete="off">
-
             <h1 class="regist-head-style">Create Account</h1>
             <span class="input-icon-style"><i class="fa-solid fa-user"></i></span>
             <input type="text" name="full-name" autocomplete="off" class="txt-style" placeholder="Full Name"
@@ -16,11 +13,8 @@
             <input type="password" name="confirm-password" class="txt-style" placeholder="Confirm Password" required><br>
             <input type="checkbox" name="terms" id="terms"><label for="terms" id="terms-txt"> I accept <a href="#">terms of use</a></label><br>
             <input type="submit" value="Create New" id="registbut" class="but-style">
-
         </form>
-
-        <p id="loginbut">Have an account? <a [routerLink]="['/login']">Login</a></p>
-
+        <p id="loginbut">Have an account? <a [routerLink]="['/login']">login</a></p>
+        <p id="loginbut">Back to <a [routerLink]="['/main/home']">home</a></p>
     </div>
-
 </div>

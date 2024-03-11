@@ -9,21 +9,20 @@
 }
 
 .regist-container-style{
-    width: 400px;
-    height: 560px;
+    width: 420px;
+    height: 590px;
     background-color: #080808e7;
-    margin-left: calc(50% - 200px);
-    margin-top: 30px;
-    border: 1px solid #222831;
+    margin-left: calc(50% - 210px);
     border-radius: 15px;
     position:fixed;
+    margin-top: 20px;
     
 }
 
 .regist-container-input-style{
     display: inline;
     float: left;
-    margin: 40px;
+    margin: 55px;
     margin-top: 30px;
     margin-bottom: 20px;
 
@@ -33,7 +32,7 @@
     font-size: 28px;
     text-align: center;
     font-weight: bolder;
-    color: #EEEEEE;
+    color: #ffffff;
 
 }
 
@@ -46,7 +45,7 @@
     border-top-left-radius: 7px;
     border-bottom-left-radius: 7px;
     font-size: 24px;
-    color: #EEEEEE;
+    color: #ffffff;
     text-align:center;
     background-color: #31363F;
 
@@ -62,7 +61,7 @@
     font-size: 14px;
     padding:1px 8px;
     background-color: #31363F;
-    color: #EEEEEE;
+    color: #ffffff;
 }
 
 .txt-style:hover{
@@ -73,44 +72,8 @@
     border: 0px;
 }
 
-.but-style{
-    width: 295px;
-    height: 50px;
-    margin-left: 10px;
-    border-radius: 7px;
-    border: 0px;
-    font-size: 18px;
-    background-color: #346769;
-    color: white;
-}
-
-#loginbut{
-    text-align: center;
-    font-size: 14px;
-    color: #EEEEEE;
-
-}
-
-#loginbut>a{
-    font-weight: normal;
-    color: #76ABAE;
-    text-decoration: none;
-}
-
-#loginbut>a:hover{
-    color: #90d3d6;
-    text-decoration: underline;
-}
-
-.but-style:hover{
-    border: 1px solid rgb(0, 0, 0);
-    font-size: 18px;
-    padding-left:10px ;
-    background-color: #76ABAE;
-}
-
 #terms{
-    margin: 15px 0px 30px 10px;
+    margin: 15px 5px 30px 15px;
     width: 16px;
     height: 16px;
 }
@@ -118,18 +81,51 @@
 #terms-txt{
     font-size: 16px;
     font-weight: normal;
-    color: #b8b8b8;
+    color: #aaaaaa;
 }
 
 #terms-txt>a{
-    font-weight: normal;
-    color: #76ABAE;
+    color: #ffffff;
     text-decoration: none;
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
 }
 
-#terms-txt>a:hover{
-    color: #90d3d6;
-    text-decoration: underline;
+.but-style{
+    width: 295px;
+    height: 50px;
+    margin-left: 10px;
+    border-radius: 7px;
+    border: 0px;
+    font-size: 18px;
+    background-color: rgb(200, 10, 20);
+    color: #ffffff;
+
+    &:hover,
+    &:focus {
+        background-color: rgb(175, 15, 25);
+    }
+}
+
+#loginbut{
+    text-align: center;
+    font-size: 15px;
+    color: #aaaaaa;
+
+}
+
+#loginbut>a{
+    font-weight: normal;
+    color: #ffffff;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
 }
 
 input:focus,
