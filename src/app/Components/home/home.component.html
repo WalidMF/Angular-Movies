@@ -1,3 +1,25 @@
+<nav>
+    <button class="filter-style" (click)="tabMovieChange(0)">Top Movies</button>
+    <button class="filter-style" (click)="tabMovieChange(1)">Upcoming Movies</button>
+    <button class="filter-style" (click)="tabMovieChange(2)">Now Playing Movies</button>
+    <div id="indicator"></div>
+</nav>
 <div class="page-body">
-
+    <div class="movies-lists">
+        <section class="cards-space">
+            <ng-container *ngFor="let movie of moviesList; index as n; trackBy:trackByFun">
+                <a class="card" href="#"
+                    style="background-image: url(https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{movie?.poster_path}})">
+                    <div class="card-data">
+                        <h1>{{movie.original_title}}</h1>
+                        <p>{{movie.overview | shortenText:50}}</p>
+                        <div class="date">{{movie.release_date}}</div>
+                        <div class="tags">
+                            <div class="tag">{{movie.vote_average | number: '1.0-1'}}</div>
+                        </div>
+                    </div>
+                </a>
+            </ng-container>
+        </section>
+    </div>
 </div>

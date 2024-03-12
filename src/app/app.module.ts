@@ -11,6 +11,8 @@ import { MainComponent } from './Components/main/main.component';
 import { HomeComponent } from './Components/home/home.component';
 import { HeaderComponent } from './Components/header/header.component';
 import { FooterComponent } from './Components/footer/footer.component';
+import { ShortenTextPipe } from './Pipes/shorten-text.pipe';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -20,13 +22,15 @@ import { FooterComponent } from './Components/footer/footer.component';
     MainComponent,
     HomeComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ShortenTextPipe,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

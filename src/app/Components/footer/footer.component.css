@@ -7,12 +7,13 @@
 .container {
     max-width: 1170px;
     margin: auto;
+    padding-top: 30px;
 }
 
 .row {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
 }
 
 ul {
@@ -106,13 +107,13 @@ ul {
     font-size: 14px;
     text-align: center;
     border-top: 1px solid rgb(119, 119, 119);
-    margin: 30px 200px 10px 200px;
+    margin: 30px;
     padding-top: 5px;
+
+    @media (min-width: 640px) {
+        margin: 30px 200px 10px 200px;
+    }
 }
-
-
-
-
 
 .main-dash-container {
     box-sizing: border-box;
