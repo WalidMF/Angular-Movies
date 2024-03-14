@@ -23,4 +23,20 @@ export class MoviesService {
   getMovies(type: string, page: number): Observable<any> {
     return this.http.get(`${this.baseUrl}movie/${type}?api_key=${this.apiKey}&page=${page}&language=${this.language}&region=${this.region}`)
   }
+
+  getMovieById(id: string): Observable<any> {
+    return this.http.get(`${this.baseUrl}movie/${id}?api_key=${this.apiKey}`)
+  }
+
+  getMovieReviews(id: string): Observable<any> {
+    return this.http.get(`${this.baseUrl}movie/${id}/reviews?api_key=${this.apiKey}`)
+  }
+
+  getMovieVideos(id: string): Observable<any> {
+    return this.http.get(`${this.baseUrl}movie/${id}/videos?api_key=${this.apiKey}`)
+  }
+
+  getRecomendMovies(id: string): Observable<any> {
+    return this.http.get(`${this.baseUrl}movie/${id}/recommendations?api_key=${this.apiKey}`)
+  }
 }

@@ -1,0 +1,65 @@
+<div id="movie-card-list">
+  <div class="movie-card "
+    style="background-image: url(https://image.tmdb.org/t/p/w1280/{{movieContent?.backdrop_path}});">
+    <div class="movie-card__overlay"></div>
+    <div class="movie-card__content">
+      <div class="movie-card__share">
+        <button class="movie-card__icon"><i class="fa-regular fa-heart"></i></button>
+        <button class="movie-card__icon"><i class="fa-regular fa-message"></i></button>
+      </div>
+      <div class="movie-card__header">
+        <h1 class="movie-card__title">{{movieContent?.title}}</h1>
+        <h4 class="movie-card__info"><i class="fa-solid fa-star"></i> {{movieContent?.vote_average| number: '1.0-1'}}
+          | {{movieContent?.vote_coun}} Reviews | {{movieContent?.release_date|date:'yyyy'}}</h4>
+      </div>
+      <p class="movie-card__desc">{{movieContent?.overview | shortenText:170}} <a
+          href="/main/movie-content/{{movieId}}#gotop">read more</a></p>
+      <a class="playbut" href="{{this.video}}" target="_blank" type="button"><i class="fa-solid fa-play"></i> Watch Trailer</a>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card_left">
+    <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{movieContent?.poster_path}}">
+  </div>
+  <div class="card_right">
+    <h1>Story</h1>
+    <div class="card_right__review" id="gotop">
+      <p>{{movieContent?.overview}}</p>
+    </div>
+    <div class="card_right__details">
+      <ul>
+        <li *ngFor="let g of moviegeners">{{g.name}}</li>
+      </ul>
+    </div>
+    <div class="card_right__button">
+      <a href="#" target="_blank"><i class="fa-solid fa-play"></i> WATCH
+        ONLINE</a>
+      <a href="#" target="_blank"><i class="fa-solid fa-download"></i>
+        DAWOLOAD</a>
+    </div>
+  </div>
+</div>
+
+<h2>Recomend Movies</h2>
+<div class="movies-lists">
+  <section class="rm-cards-space">
+    <ng-container
+      *ngFor="let movie of moviesList | paginate: { itemsPerPage: 4, currentPage: p }">
+      <a class="rm-card" href="/main/movie-content/{{movie.id}}"
+        style="background-image: url(https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{movie?.poster_path}})">
+        <div class="rm-card-data">
+          <h1>{{movie.original_title}}</h1>
+          <p>{{movie.overview | shortenText:50}}</p>
+          <div class="date">{{movie.release_date}}</div>
+          <div class="tags">
+            <div class="tag">{{movie.vote_average | number: '1.0-1'}}</div>
+          </div>
+        </div>
+      </a>
+    </ng-container>
+  </section>
+</div>
+
+

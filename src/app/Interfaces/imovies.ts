@@ -1,4 +1,4 @@
-export interface Movies {
+export interface IMovies {
     adult: boolean;
     backdrop_path: string;
     genres: Array<any>;

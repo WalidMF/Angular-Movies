@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MoviesService } from '../../Services/movies.service';
 import { MovieModel } from '../../Models/movie.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -16,6 +17,7 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private moviesService: MoviesService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -28,7 +30,7 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  tabMovieChange(index:number) {
+  tabMovieChange(index: number) {
     this.selectedMovieTab = index;
     const movieTypes = ['popular', 'upcoming', 'now_playing'];
     const selectedType = movieTypes[index];
@@ -37,9 +39,13 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  trackByFun(index:number, m:MovieModel){
+  trackByFun(index: number, m: MovieModel) {
     return m.id;
   }
- 
+
+  viewMovieContent(movieId: any) {
+    this.router.navigate(['main/movie-content/', movieId]);
+  }
+
 
 }
