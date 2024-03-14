@@ -62,7 +62,7 @@ a {
   
   &:hover,
   &:focus {
-    color: rgb(250, 10, 26);
+    content: '';
   }
 }
 

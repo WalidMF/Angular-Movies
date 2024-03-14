@@ -14,6 +14,7 @@ import { FooterComponent } from './Components/footer/footer.component';
 import { ShortenTextPipe } from './Pipes/shorten-text.pipe';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { MovieContentComponent } from './Components/movie-content/movie-content.component';
+import { FavoriteComponent } from './Components/favorite/favorite.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { MovieContentComponent } from './Components/movie-content/movie-content.
     FooterComponent,
     ShortenTextPipe,
     MovieContentComponent,
+    FavoriteComponent,
   ],
   imports: [
     BrowserModule,

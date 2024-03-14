@@ -24,6 +24,8 @@ export class MovieContentComponent implements OnInit {
   moviesList: Array<MovieModel> = [];
   p: number = 1;
 
+  isFavorite=false;
+
   constructor(
     private moviesService: MoviesService,
     private route: ActivatedRoute,
@@ -46,6 +48,7 @@ export class MovieContentComponent implements OnInit {
     this.http.get(`${this.baseUrl}movie/${id}?api_key=${this.apiKey}`).subscribe(res => {
       this.movieContent = res;
       this.moviegeners = this.movieContent.genres;
+      this.isFavoriteMovie(this.movieContent?.id)
     });
   }
 
@@ -63,7 +66,22 @@ export class MovieContentComponent implements OnInit {
   getRecomendMovies(id: any): void {
     this.moviesService.getRecomendMovies(id).subscribe(res => {
       this.moviesList = res.results;
-      console.log(res.results);
     });
+  }
+
+  isFavoriteMovie(id:any){
+    const mid = localStorage.getItem('Favorite-Movie');
+    if(mid == this.movieContent?.id){
+      this.isFavorite = true;
+    }
+  }
+
+  addToFavorite(id:any){
+    localStorage.setItem('Favorite-Movie', id);
+    window.location.reload();
+  }
+
+  goToFavoritePage(){
+    this.router.navigate(['main/favorite/']);
   }
 }

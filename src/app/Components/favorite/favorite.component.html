@@ -1,0 +1,32 @@
+<div class="header-style">
+    <div class="head-pic-style">
+        <div class="header-content">
+            <span class="text1">Favorite List</span><br>
+        </div>
+    </div>
+    <div class="main-dash-container">
+        <div class="dash-container"></div>
+    </div>
+</div>
+<div *ngIf="isFavorite" class="card">
+    <div class="card_left">
+        <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{movieContent?.poster_path}}">
+    </div>
+    <div class="card_right">
+        <h2>{{movieContent?.title}}</h2>
+        <h4 class="movie-card__info"><i class="fa-solid fa-star"></i> {{movieContent?.vote_average| number: '1.0-1'}}
+            | {{movieContent?.vote_coun}} Reviews | {{movieContent?.release_date|date:'yyyy'}}</h4>
+        <div class="card_right__review" id="gotop">
+            <p>{{movieContent?.overview | shortenText: 100}}</p>
+        </div>
+        <div class="card_right__button">
+            <a (click)="viewMovieContent(movieContent?.id)"><i class="fa-solid fa-eye"></i> View Details</a>
+            <a (click)="deleteToFavorite(movieContent?.id)"><i class="fa-solid fa-trash-can"></i> Delete From List</a>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="!isFavorite"  class="empaty-list">
+    <h1>Your Favorite List Is Empty</h1>
+    <h1><i class="fa-regular fa-folder-open"></i></h1>
+</div>

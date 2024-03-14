@@ -5,6 +5,7 @@ import { CreateAccountComponent } from './Components/create-account/create-accou
 import { MainComponent } from './Components/main/main.component';
 import { HomeComponent } from './Components/home/home.component';
 import { MovieContentComponent } from './Components/movie-content/movie-content.component';
+import { FavoriteComponent } from './Components/favorite/favorite.component';
 
 const routes: Routes = [
   {path: 'login', component:LoginComponent},
@@ -12,7 +13,8 @@ const routes: Routes = [
   {path: '', redirectTo:"/main/home", pathMatch:"full"},
   {path: 'main', component:MainComponent, children: [
     {path: 'home', component:HomeComponent},
-    {path: 'movie-content/:id', component:MovieContentComponent}
+    {path: 'movie-content/:id', component:MovieContentComponent},
+    {path: 'favorite', component:FavoriteComponent}
 
   ]},
 ];
